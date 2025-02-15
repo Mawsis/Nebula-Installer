@@ -9,16 +9,11 @@
     }
   },
   "bin": [
-    "bin/framework"
+    "bin/nebula"
   ],
   "require": {
     "php": ">=8.0",
     "symfony/console": "^7.2"
-  },
-  "scripts": {
-    "post-create-project-cmd": [
-      "php bin/framework new"
-    ]
   },
   "minimum-stability": "dev",
   "prefer-stable": true
