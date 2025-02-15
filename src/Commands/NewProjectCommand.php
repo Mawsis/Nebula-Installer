@@ -30,7 +30,7 @@ class NewProjectCommand extends Command
     {
         $io = new SymfonyStyle($input, $output);
         $projectName = $input->getArgument('name');
-        $projectPath = $this->targetPath;
+        $projectPath = $this->targetPath . '/' . $projectName;
 
 
         $io->title("🚀 Creating a new Nebula project: $projectName");
@@ -51,6 +51,7 @@ class NewProjectCommand extends Command
 
         // ✅ Step 3: Confirm and Start Installation
         $io->section("📦 Setting up your Nebula project...");
+        $io->writeln("Project Name: $projectPath");
         if (is_dir($projectPath)) {
             $io->error("Directory '$projectName' already exists!");
             return Command::FAILURE;
