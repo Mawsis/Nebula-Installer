@@ -9,6 +9,6 @@ use App\Commands\NewProjectCommand;
 $app = new Application('Nebula Framework Installer', '1.0.0');
 
 // Register commands
-$app->add(new NewProjectCommand());
+$app->add(new NewProjectCommand(getcwd()));
 
 $app->run();

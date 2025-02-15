@@ -1,7 +1,7 @@
 {
   "name": "mawsis/nebula-installer",
   "description": "Nebula PHP Installer",
-  "type": "project",
+  "type": "library",
   "license": "MIT",
   "autoload": {
     "psr-4": {
@@ -15,11 +15,11 @@
     "php": ">=8.0",
     "symfony/console": "^7.2"
   },
-  "minimum-stability": "dev",
-  "prefer-stable": true,
   "scripts": {
     "post-create-project-cmd": [
-      "@php bin/framework new"
+      "php bin/framework new"
     ]
-  }
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true
 }

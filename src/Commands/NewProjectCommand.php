@@ -12,8 +12,10 @@ use App\Utils\FileGenerator;
 
 class NewProjectCommand extends Command
 {
-    public function __construct()
+    private string $targetPath;
+    public function __construct($targetPath)
     {
+        $this->targetPath = $targetPath;
         parent::__construct('new'); // Command name
     }
 
@@ -28,7 +30,8 @@ class NewProjectCommand extends Command
     {
         $io = new SymfonyStyle($input, $output);
         $projectName = $input->getArgument('name');
-        $projectPath = getcwd() . "/$projectName";
+        $projectPath = $this->targetPath;
+
 
         $io->title("🚀 Creating a new Nebula project: $projectName");
 
