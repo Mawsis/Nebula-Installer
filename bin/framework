@@ -1,0 +1,14 @@
+#!/usr/bin/env php
+<?php
+
+require __DIR__ . '/../vendor/autoload.php';
+
+use Symfony\Component\Console\Application;
+use App\Commands\NewProjectCommand;
+
+$app = new Application('Nebula Framework Installer', '1.0.0');
+
+// Register commands
+$app->add(new NewProjectCommand());
+
+$app->run();
