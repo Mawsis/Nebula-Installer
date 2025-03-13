@@ -64,7 +64,7 @@ class User extends UserModel
     const STATUS_INACTIVE = 0;
     const STATUS_ACTIVE = 1;
     const STATUS_DELETED = 2;
-    
+
     public string \$username = '';
     public string \$email = '';
     public string \$password = '';
@@ -260,7 +260,7 @@ PHP;
 use Nebula\Core\Facades\Route;
 use Nebula\Core\Response;
 
-Router::get('/', function (Response \$response) {
+Route::get('/', function (Response \$response) {
     return \$response->render('home', ['message' => 'Hello, World!']);
 });
 PHP;
@@ -275,7 +275,7 @@ PHP;
 use Nebula\Core\Facades\Route;
 use Nebula\Core\Response;
 
-Router::get('/', function (Response \$response) {
+Route::get('/', function (Response \$response) {
     return \$response->json(['message' => 'Hello, World!']);
 });
 PHP;
